@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 72 72" xml:space="preserve">
+<style type="text/css">
+    @keyframes scaleanim {
+        from {transform: scale(1);}
+        to {transform: scale(1.5);}
+    }
+	.st0{fill:none;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:3;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:2;}
+	.st3{fill:#F0A155;}
+	.st4{fill:#FFFFFF;}
+    .anim{
+		animation-name: scaleanim;
+		transform-origin: center;
+		animation-duration: 1s;
+		animation-timing-function: ease-out; 
+		animation-iteration-count: infinite;
+	}
+</style>
+<g>
+	<circle class="st1 anim" cx="36" cy="36.3" r="22.3"/>
+	<circle class="st2 anim" cx="36" cy="36.3" r="16.7"/>
+	<path class="st3" d="M34.5,48.9c-1.2,0-2.3-1-2.3-2.3v-5.2c-0.9-0.3-1.5-1.2-1.5-2.1v-4.4c0-2.1,1.7-3.7,3.7-3.7h0.6
+		c-2-0.5-3.3-2.5-2.8-4.5c0.5-2,2.5-3.3,4.5-2.8c2,0.5,3.3,2.5,2.8,4.5c-0.3,1.4-1.4,2.5-2.8,2.8h0.6c2.1,0,3.7,1.7,3.7,3.7v4.4
+		c0,1-0.6,1.8-1.5,2.1v5.2c0,1.2-1,2.3-2.3,2.3L34.5,48.9z"/>
+	<path class="st4" d="M36,24.6c1.6,0,3,1.3,3,2.9c0,1.6-1.3,3-2.9,3c-1.6,0-3-1.3-3-2.9c0,0,0,0,0,0C33.1,25.9,34.4,24.6,36,24.6
+		L36,24.6 M37.5,31.9c1.6,0,2.9,1.3,2.9,2.9c0,0,0,0,0,0v4.4c0,0.8-0.7,1.5-1.5,1.5v5.9c0,0.8-0.7,1.5-1.5,1.5l0,0h-3
+		c-0.8,0-1.5-0.7-1.5-1.5v-5.9c-0.8,0-1.5-0.7-1.5-1.5c0,0,0,0,0,0v-4.4c0-1.6,1.3-2.9,2.9-2.9c0,0,0,0,0,0H37.5 M36,23
+		c-2.5,0-4.5,2-4.5,4.5c0,1.2,0.5,2.3,1.3,3.2c-1.7,0.7-2.8,2.3-2.8,4.2v4.4c0,1.1,0.6,2.1,1.5,2.6v4.8c0,1.7,1.3,3,3,3h2.9
+		c1.7,0,3-1.3,3-3v-4.8c0.9-0.6,1.5-1.5,1.5-2.6v-4.4c0-1.8-1.1-3.5-2.8-4.2c1.8-1.8,1.8-4.6,0-6.4C38.3,23.5,37.1,23,36,23L36,23z"
+		/>
+</g>
+</svg>

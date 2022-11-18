@@ -1,0 +1,5 @@
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" xml:space="preserve">
+  <path id="cameraviewer" stroke="red" fill="yellow" stroke-width="1" d="M 50 10 L 10 10 L 10 50 A 40 40 0 0 0 50 10" ></path>
+  <circle id="droppoint" cx="10" cy="10" r="8" stroke="white" stroke-width="1" fill="red"></circle>
+</svg>
