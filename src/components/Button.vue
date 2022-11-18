@@ -1,8 +1,5 @@
 <template>
         <button class="button" :class="type">
-            {{ true && <div>
-                sdaf
-                </div>}}
             <slot></slot>
         </button>
 </template>
@@ -11,6 +8,11 @@ export default {
     props: {
         type: String,
 
+    },
+    methods:{
+      test(){
+        console.log("call fn test in button");
+      }
     }
 }
 </script>
@@ -18,16 +20,27 @@ export default {
     .button{
         height: 44px;
         width: 44px;
-        padding: auto;
         background-color: var(--primary);
         color: var(--white);
         font-family: var(--font-family);
         border: none;
-        font-size: 16px;
+        font-size: 15px;
         cursor: pointer;
         line-height: 100%;
+        transition: .2s;
+        text-transform: uppercase;
+        &:hover{
+            background-color: var(--primary-hover);
+            color: var(--white-hover)
+        }
     }
     .button.menu-btn{
-        min-width: 130px;
+        min-width: 150px;
+    }
+    .button.icon{
+        font-size: 26px;
+    }
+    .button.text-btn{
+        min-width: 300px;
     }
 </style>

@@ -1,7 +1,7 @@
 <template >
     <div class="menu">
         <div class="menu-toggle">
-            <Btn >Vn</Btn> 
+            <Btn type="icon" ><font-awesome-icon icon="bars" /></Btn> 
         </div>
         <div class="menu-item">
             <nav>
@@ -9,7 +9,7 @@
                     <Btn type="menu-btn">360</Btn>
                 </router-link>
     
-                <router-link to="/floorpaln">
+                <router-link to="/floorplan">
                     <Btn type="menu-btn">Floorplan</Btn>
                 </router-link>
     
@@ -19,13 +19,14 @@
                 
                 <Btn type="menu-btn">Factilites</Btn> 
     
-                <Btn></Btn> 
-    
+                <Btn>VN</Btn> 
             </nav>
         </div>
     </div>
 </template>
 <script>
+
+
 import Btn from '@/components/Button.vue'
 export default {
     components: {

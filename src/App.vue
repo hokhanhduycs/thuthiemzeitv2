@@ -6,14 +6,17 @@
     </nav> -->
     <router-view/>
     <Menu></Menu>
+    <Logo/>
 
   </div>
 </template>
 <script>
 import Menu from "@/components/Menu.vue"
+import Logo from "@/components/Logo.vue"
 export default {
     components: {
-      Menu
+      Menu,
+     Logo
     }
 }
 </script>

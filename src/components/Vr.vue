@@ -111,11 +111,11 @@
   
           .mini-map {
               position: fixed;
-              right: 0;
-              bottom: 0;
-              width: 400px;
+              right: calc(var(--default-boder-bg) *4 + 44px);
+              bottom: calc(var(--default-boder-bg) *4 + 44px);
+              width: 300px;
               height: 300px;
-              border: 5px orange solid;
+              /* border: 5px orange solid; */
           }
   
           #hotspot-info {
