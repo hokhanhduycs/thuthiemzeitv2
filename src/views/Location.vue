@@ -4,22 +4,22 @@
 
       <img src="@/assets/location/map_vn.svg" alt="map">
       
-      <div v-show="true">
-        <img v-show="true" src="@/assets/location/culture_vn.svg" alt="map">
-        <img v-show="false" src="@/assets/location/adminCenter_vn.svg" alt="map">
-        <img v-show="false" src="@/assets/location/sport_vn.svg" alt="map">
-        <img v-show="false" src="@/assets/location/convalescence_vn.svg" alt="map">
-        <img v-show="false" src="@/assets/location/hospital_vn.svg" alt="map">
-        <img v-show="false" src="@/assets/location/edu_vn.svg" alt="map">
+      <div v-show="false">
+        <img v-show="mapItem == 1" src="@/assets/location/culture_vn.svg" alt="map">
+        <img v-show="mapItem == 2" src="@/assets/location/adminCenter_vn.svg" alt="map">
+        <img v-show="mapItem == 3" src="@/assets/location/sport_vn.svg" alt="map">
+        <img v-show="mapItem == 4" src="@/assets/location/convalescence_vn.svg" alt="map">
+        <img v-show="mapItem == 5" src="@/assets/location/hospital_vn.svg" alt="map">
+        <img v-show="mapItem == 6" src="@/assets/location/edu_vn.svg" alt="map">
 
       </div>
-      <div v-show="false">
-        <img v-show="false"  src="@/assets/location/culture_en.svg" alt="map">
-        <img v-show="false" src="@/assets/location/adminCenter_en.svg" alt="map">
-        <img v-show="false" src="@/assets/location/sport_en.svg" alt="map">
-        <img v-show="false" src="@/assets/location/convalescence_en.svg" alt="map">
-        <img v-show="false" src="@/assets/location/hospital_en.svg" alt="map">
-        <img v-show="false" src="@/assets/location/edu_en.svg" alt="map">
+      <div v-show="true">
+        <img v-show="mapItem == 1"  src="@/assets/location/culture_en.svg" alt="map">
+        <img v-show="mapItem == 2" src="@/assets/location/adminCenter_en.svg" alt="map">
+        <img v-show="mapItem == 3" src="@/assets/location/sport_en.svg" alt="map">
+        <img v-show="mapItem == 4" src="@/assets/location/convalescence_en.svg" alt="map">
+        <img v-show="mapItem == 5" src="@/assets/location/hospital_en.svg" alt="map">
+        <img v-show="mapItem == 6" src="@/assets/location/edu_en.svg" alt="map">
       </div>
 
       <img src="@/assets/location/logo_map.svg" alt="logo map">
@@ -27,25 +27,31 @@
 
     </div>
     <div class="location-option">
-      <Btn type="text-btn"> <span><iconCulture/></span> 
-        culture center
+      <Btn :class="{active: mapItem == 1}" @click.native="mapItem = 1" type="text-btn"> <span><iconCulture/></span> 
+       {{lang == "vn"? "Trung tâm văn hóa": "culture center"}} 
       </Btn>
-      <Btn type="text-btn" > <span><iconAdminCenter/></span> 
-        Administrative Center
+      <Btn :class="{active: mapItem == 2}" @click.native="mapItem = 2" type="text-btn" > <span><iconAdminCenter/></span> 
+        {{lang == "vn"? "Trung tâm hành chính": "Administrative Center"}} 
       </Btn>
-      <Btn type="text-btn"> <span><iconSport/></span> 
-        Sports Center
+      <Btn :class="{active: mapItem == 3}" @click.native="mapItem = 3" type="text-btn"> <span><iconSport/></span> 
+        {{lang == "vn"? "Trung tâm Thể thao": "Sports Center"}} 
       </Btn>
-      <Btn type="text-btn"> <span><iconConvalescence/></span> 
-        Resort
+      <Btn :class="{active: mapItem == 4}" @click.native="mapItem = 4" type="text-btn"> <span><iconConvalescence/></span> 
+        {{lang == "vn"? "Khu Nghĩ Dưỡng": "Resort"}} 
       </Btn>
-      <Btn type="text-btn"> <span><iconEdu/></span> 
-        span>School
+      <Btn :class="{active: mapItem == 5}" @click.native="mapItem = 5" type="text-btn"> <span><iconHospital/></span> 
+        {{lang == "vn"? "Bệnh viện quốc tế": "Hospital"}} 
+      </Btn>
+      <Btn :class="{active: mapItem == 6}" @click.native="mapItem = 6" type="text-btn"> <span><iconEdu/></span> 
+        {{lang == "vn"? "Trường học": "School"}}
       </Btn>
     </div>
   </div>
 </template>
 <script>
+
+import { mapGetters } from 'vuex'
+
 import Btn from '@/components/Button.vue'
 import iconCulture from "@/Icons/iconCulture.vue"
 import iconSport from "@/Icons/iconSport.vue"
@@ -53,27 +59,6 @@ import iconHospital from "@/Icons/iconHospital.vue"
 import iconEdu from "@/Icons/iconEdu.vue"
 import iconConvalescence from "@/Icons/iconConvalescence.vue"
 import iconAdminCenter from "@/Icons/iconAdminCenter.vue"
-
-// img map
-
-// import logo_map from '@/assets/location/logo_map.svg'
-// 
-// import culture_vn from '@/assets/location/culture_vn.svg'
-// import adminCenter_vn from '@/assets/location/adminCenter_vn.svg'
-// import sport_vn from '@/assets/location/sport_vn.svg'
-// import convalescence_vn from '@/assets/location/convalescence_vn.svg'
-// import hospital_vn from '@/assets/location/hospital_vn.svg'
-// import edu_vn from '@/assets/location/edu_vn.svg'
-
-import map from '@/assets/location/map_vn.svg'
-
-// import culture_en from '@/assets/location/culture_en.svg'
-// import adminCenter_en from '@/assets/location/adminCenter_en.svg'
-// import sport_en from '@/assets/location/sport_en.svg'
-// import convalescence_en from '@/assets/location/convalescence_en.svg'
-// import hospital_en from '@/assets/location/hospital_en.svg'
-// import edu_en from '@/assets/location/edu_en.svg'
-
 
 export default {
     components: {
@@ -85,28 +70,14 @@ export default {
         iconConvalescence,
         iconAdminCenter,
     },
-    data:{
-      map: map,
-      // img: {
-      //   logo_map: logo_map,
-      //   vn:{
-      //     logo_map: logo_map,
-      //     culture: culture_vn,
-      //     adminCenter: adminCenter_vn,
-      //     sport: sport_vn,
-      //     convalescence: convalescence_vn,
-      //     hospital: hospital_vn,
-      //     edu: edu_vn,
-      //   },
-      //   en: {
-      //     culture: culture_en,
-      //     adminCenter: adminCenter_en,
-      //     sport: sport_en,
-      //     convalescence: convalescence_en,
-      //     hospital: hospital_en,
-      //     edu: edu_en,
-      //   }
-      // },
+    data(){
+      return{
+        mapItem: -1
+      }
+
+    },
+    computed: {
+        ...mapGetters(["lang"]),
     },
     methods:{
       test(){

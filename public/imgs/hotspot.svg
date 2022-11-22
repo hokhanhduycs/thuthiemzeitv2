@@ -9,7 +9,7 @@
 	.st0{fill:none;}
 	.st1{fill:none;stroke:#FFFFFF;stroke-width:3;}
 	.st2{fill:none;stroke:#FFFFFF;stroke-width:2;}
-	.st3{fill:#F0A155;}
+	.st3{fill:#0082a1;}
 	.st4{fill:#FFFFFF;}
     .anim{
 		animation-name: scaleanim;

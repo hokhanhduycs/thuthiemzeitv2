@@ -1,5 +1,5 @@
 <template>
-        <button class="button" :class="type">
+        <button  :disabled="disabled" class="button" :class="type">
             <slot></slot>
         </button>
 </template>
@@ -7,7 +7,7 @@
 export default {
     props: {
         type: String,
-
+        disabled: Boolean
     },
     methods:{
       test(){
@@ -33,6 +33,11 @@ export default {
             background-color: var(--primary-hover);
             color: var(--white-hover)
         }
+        &[disabled]{
+            pointer-events: none;
+            cursor: context-menu;
+            opacity: .7;
+        }
     }
     .button.menu-btn{
         min-width: 150px;
@@ -42,5 +47,13 @@ export default {
     }
     .button.text-btn{
         min-width: 300px;
+    }
+    .button.active{
+        background-color: var(--primary-hover);
+        color: var(--white-hover);
+        // &:hover{
+        //     background-color: var(--primary);
+        //     color: var(--white)
+        // }
     }
 </style>

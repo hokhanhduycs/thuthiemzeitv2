@@ -11,10 +11,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faMagnifyingGlassMinus, faMagnifyingGlassPlus, faExpand, faArrowsSpin, faStreetView } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faBars)
+library.add(faBars, faMagnifyingGlassMinus, faMagnifyingGlassPlus, faExpand, faArrowsSpin, faStreetView)
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)

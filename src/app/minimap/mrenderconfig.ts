@@ -11,7 +11,7 @@ export default class MRenderConfig {
     colorDisable = 'black'
     borderColor = 'white'
     isCustomColor = false
-    customColor=['yellow','red','blue']
+    customColor=['#52b2d2','#005572','blue']
     canSelect = true
     canPan = true
     canZoom = true

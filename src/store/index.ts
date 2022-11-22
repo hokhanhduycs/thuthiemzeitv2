@@ -27,6 +27,12 @@ export default new Vuex.Store({
   state: {
     baseUrl: "http://local.rollingant.com/thuthiemzeit/hinh/",
     pano: "overview",
+    minimap: 0,
+    isMap: true,
+    isFac: false,
+    lang: "vn",
+    rotation: false,
+    zoom: 0,
     location:{
       img: {
         vn:{
@@ -132,6 +138,14 @@ export default new Vuex.Store({
   getters: {
     baseUrl: (state) => state.baseUrl,
     pano: (state) => state.pano,
+    minimap: (state) => state.minimap,
+    isMap: (state) => state.isMap,
+    isFac: (state) => state.isFac,
+    lang: (state) => state.lang,
+    rotation: (state) => state.rotation,
+    zoom: (state) => state.zoom,
+
+
     location: (state) => state.location,
     menu: (state) => state.menu,
     facility: (state) => state.facility,
@@ -142,6 +156,25 @@ export default new Vuex.Store({
     setPano(state, pano) {
       state.pano = pano
     },
+    setIsFac(state, isFac) {
+      state.isFac = isFac
+    },
+    setLang(state, lang) {
+      state.lang = lang
+    },
+    setMinimap(state, minimap) {
+      state.minimap = minimap
+    },
+    setIsMap(state, isMap) {
+      state.isMap = isMap
+    },
+    setRotation(state, rotation) {
+      state.rotation = rotation
+    },
+    setZoom(state, zoom) {
+      state.zoom = zoom
+    },
+  
   },
   actions: {
   },
